@@ -5,25 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/styles_index.css">
-    
 </head>
 <body>
-    
     <div class="button-container">
         <h1 class="tit-pr"> Bienvenido!</h1>
         <h2 class="tit-sec"> Seleccione una de las siguientes opciones</h2>
         
         <div class="boton-agrega">
-            <a href ="agregar_act.html" ><button type="button" id="agr-act">Agregar Actividades</button></a>
+            <a href="agregar_act.html"><button type="button" id="agr-act">Agregar Actividades</button></a>
         </div>
 
         <div class="boton-ver">
-            <a href="ver_listado_act.html"> <button type="button" id="ver-list">Ver Listado </button> </a>
+            <a href="ver_listado_act.html"><button type="button" id="ver-list">Ver Listado</button></a>
         </div> 
-        <div class="boton-apd">
-            <a href="estadisticas.html"> <button type="button" id="estadisticas">Estadisticas </button> </a>
+        <div class="boton-estadisticas">
+            <a href="estadisticas.html"><button type="button" id="estadisticas">Estadísticas</button></a>
+        </div>
     </div>
-       
-    
+
+    <!-- Tabla con las últimas 5 actividades -->
+    <div class="ultimas-actividades">
+        <h2>Últimas 5 Actividades Agregadas</h2>
+        <table>
+            <tr>
+                <th>Inicio</th>
+                <th>Término</th>
+                <th>Comuna</th>
+                <th>Sector</th>
+                <th>Tema</th>
+                <th>Foto</th>
+            </tr>
+            <tr>
+                <td>2025/05/15 10:15</td>
+                <td>2025/05/15 11:45</td>
+                <td>Santiago</td>
+                <td>Providencia</td>
+                <td>Natación</td>
+                <td><img src="../img/natacion.jpg" alt="Una actividad de natación" width="50"></td>
+            </tr>
+            <tr>
+                <td>2025/05/16 10:15</td>
+                <td>2025/05/16 11:45</td>
+                <td>Santiago</td>
+                <td>Pudahuel</td>
+                <td>Escalada</td>
+                <td><img src="../img/escalada.jpg" alt="Una actividad de escalada" width="50"></td>
+            </tr>
+            <tr>
+                <td>2025/05/17 10:15</td>
+                <td>2025/05/17 11:45</td>
+                <td>Santiago</td>
+                <td>Sala Toqui</td>
+                <td>Karaoke</td>
+                <td><img src="../img/karaoke.jpg" alt="Una actividad de karaoke" width="50"></td>
+            </tr>
+            <tr>
+                <td>2025/05/18 10:15</td>
+                <td>2025/05/18 11:45</td>
+                <td>Santiago</td>
+                <td>Ñuñoa</td>
+                <td>Pintar</td>
+                <td><img src="../img/pintar.jpg" alt="Una actividad de pintar" width="50"></td>
+            </tr>
+            <tr>
+                <td>2025/05/19 10:15</td>
+                <td>2025/05/19 11:45</td>
+                <td>Santiago</td>
+                <td>Las Condes</td>
+                <td>Rollers</td>
+                <td><img src="../img/rollers.jpg" alt="Una actividad de rollers" width="50"></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
