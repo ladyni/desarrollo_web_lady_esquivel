@@ -1,55 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Form Validation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Actividad</title>
     <link rel="stylesheet" type="text/css" href="./styles_agregar_act.css">
 </head>
 <body>
     <div class="main-container">
-        <div id="val-box" hidden>
-            <h2 id="val-msg"></h2>
-            <ul id="val-list"></ul>
-        </div>
-        <form name="myForm" method="post" enctype="multipart/form-data">
-            <label for="Region">Region</label>
-            <input name="region" id="region" required>
-                <option value="">Seleccione Región</option>
-            </select><br>
-            <label for="Comuna">Comuna</label>
-            <input name="comuna" id="comuna" required>
-                <option value="">Seleccione Comuna</option>
-            </select><br>
+        <h1>Informar Nueva Actividad Social</h1>
+        <form name="actividadForm" method="post" enctype="multipart/form-data">
+            <!-- Primera División: ¿Dónde? -->
+            <fieldset>
+                <legend>¿Dónde?</legend>
+                <label for="region">Región:</label>
+                <select name="region" id="region" required>
+                    <option value="">Seleccione Región</option>
+                </select><br>
 
-            <label for="sector">Sector</label>
-            <input type="text" name="sector" id="sector" maxlength="100" ><br>
+                <label for="comuna">Comuna:</label>
+                <select name="comuna" id="comuna" required>
+                    <option value="">Seleccione Comuna</option>
+                </select><br>
 
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" minlength="15" maxlength="200" required><br>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" minlength="15" required><br>
-            <label for="phone">Numero de Celular</label>
-            <input type="tel" name="phone" id="phone" minlength="8" required><br>
-            
-            <label for="files">Pictures</label>
-            <input type="file" name="files" id="files" multiple accept="image/*,.pdf" required><br>
+                <label for="sector">Sector:</label>
+                <input type="text" name="sector" id="sector" maxlength="100" placeholder="Opcional"><br>
+            </fieldset>
 
-            <label for="select-department">Mejor departamento</label>
-            <select name="select-department" id="select-department" required>
-                <option value="">Seleccione un departamento</option>
-            </select><br>
+            <!-- Segunda División: ¿Quién organiza? -->
+            <fieldset>
+                <legend>¿Quién organiza?</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" minlength="3" maxlength="100" required><br>
 
-            <label for="select-course">Mejor ramo</label>
-            <select name="select-course" id="select-course" required>
-                <option value="">Seleccione un ramo</option>
-            </select><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required><br>
 
-            <label for="reason" style="display: none;">Argumentos</label>
-            <textarea name="comments" id="comments" rows="4" cols="50" style="display: none;"></textarea><br>
-            
-            <button id="submit-btn" type="button">Enviar</button>
+                <label for="phone">Número de Celular:</label>
+                <input type="tel" name="phone" id="phone" minlength="8" maxlength="15" required><br>
+
+                <label for="contactar">Contactar por:</label>
+                <select name="contactar" id="contactar" required>
+                    <option value="email">Email</option>
+                    <option value="telefono">Teléfono</option>
+                </select><br>
+            </fieldset>
+
+            <!-- Tercera División: ¿Cuándo y de qué trata? -->
+            <fieldset>
+                <legend>¿Cuándo y de qué trata?</legend>
+                <label for="inicio">Día y Hora de Inicio:</label>
+                <input type="datetime-local" name="inicio" id="inicio" required><br>
+
+                <label for="termino">Día y Hora de Término:</label>
+                <input type="datetime-local" name="termino" id="termino"><br>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="descripcion" rows="10" cols="50" placeholder="Opcional"></textarea><br>
+
+                <label for="tema">Tema:</label>
+                <select name="tema" id="tema" required>
+                    <option value="">Seleccione un tema</option>
+                    <option value="musica">Música</option>
+                    <option value="deporte">Deporte</option>
+                    <option value="ciencias">Ciencias</option>
+                    <option value="religion">Religión</option>
+                    <option value="politica">Política</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="juegos">Juegos</option>
+                    <option value="baile">Baile</option>
+                    <option value="comida">Comida</option>
+                    <option value="otro">Otro</option>
+                </select><br>
+
+                <div id="tema-otro-container" style="display: none;">
+                    <label for="tema-otro">Especifique el tema:</label>
+                    <input type="text" name="tema-otro" id="tema-otro" minlength="3" maxlength="15"><br>
+                </div>
+
+                <label for="foto">Foto:</label>
+                <input type="file" name="foto" id="foto" accept="image/*" multiple required><br>
+            </fieldset>
+
+            <button type="submit" id="submit-btn">Enviar</button>
         </form>
     </div>
-    <script src="./js/select.js"></script>
-    <script src="./js/validation.js"></script>
+    <script src="../js/region_comuna(1).js"></script>
+    <script src="../js/agregar_act.js"></script>
+    
 </body>
 </html>
