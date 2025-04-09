@@ -54,6 +54,10 @@ form.addEventListener('submit', function (event) {
         alert('La fecha y hora de término debe ser mayor a la de inicio.');
         isValid = false;
     }
+    if (fotoInput.files.length < 1 || fotoInput.files.length > 5) {
+        alert('Por favor, suba entre 1 y 5 fotos.');
+        isValid = false;
+    }
 
     if (!isValid) {
         event.preventDefault();

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="main-container">
-        <h1>Informar Nueva Actividad Social</h1>
+        <h1>Agregar Actividad</h1>
         <form name="actividadForm" method="post" enctype="multipart/form-data">
             <!-- Primera División: ¿Dónde? -->
             <fieldset>
@@ -37,10 +37,10 @@
                 <input type="email" name="email" id="email" required><br>
 
                 <label for="phone">Número de Celular:</label>
-                <input type="tel" name="phone" id="phone" minlength="8" maxlength="15" required><br>
+                <input type="tel" name="phone" id="phone" minlength="8" maxlength="15"><br>
 
                 <label for="contactar">Contactar por:</label>
-                <select name="contactar" id="contactar" required>
+                <select name="contactar" id="contactar" >
                     <option value="email">Email</option>
                     <option value="telefono">Teléfono</option>
                 </select><br>
@@ -77,10 +77,13 @@
                     <label for="tema-otro">Especifique el tema:</label>
                     <input type="text" name="tema-otro" id="tema-otro" minlength="3" maxlength="15"><br>
                 </div>
-
-                <label for="foto">Foto:</label>
-                <input type="file" name="foto" id="foto" accept="image/*" multiple required><br>
-            </fieldset>
+                    <label for="foto">Foto:</label>
+                    
+                    <input type="file" name="foto" id="foto" accept="image/*" required><br>
+                    <button type="button" id="agregar-foto-btn">Agregar otra foto</button>
+            
+                </div>
+                </fieldset>
 
             <button type="submit" id="submit-btn">Enviar</button>
         </form>
