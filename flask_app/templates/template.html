@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    {% block css %}{% endblock %}
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <h1>{% block h1 %}{% endblock %}</h1>
+        <a class="navbar-page" href="{{ url_for('index') }}">Inicio</a>
+        <a class="navbar-page" href="{{ url_for('agregar_act') }}">Agregar Actividad</a>
+        <a class="navbar-page" href="{{ url_for('ver_listado_act') }}">Ver Listado de Actividades</a>
+        <a class="navbar-page" href="{{ url_for('estadisticas') }}">Estadísticas</a>
+        
+      </div>
+    </nav>
+
+    <section class="main-container">
+      {% block content %}{% endblock %}
+      {% block javascript %}{% endblock %}
+    </section>
+  </body>
+</html>
