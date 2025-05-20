@@ -1,0 +1,64 @@
+.volver-portada {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.volver-portada a {
+    text-decoration: none;
+    color: #6a1b9a; /* Lila oscuro */
+    font-weight: bold;
+    font-size: 5px;
+    padding: 10px 20px;
+    border: 2px solid #ba68c8; /* Borde lila */
+    border-radius: 5px;
+    background-color: #f3e5f5; /* Fondo lila claro */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.volver-portada a:hover {
+    background-color: #6a1b9a; /* Lila oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f0fc; /* Fondo lila claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.estadisticas-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f3e5f5; /* Fondo lila más oscuro */
+    border: 2px solid #d1c4e9; /* Borde lila */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.estadisticas-container h1 {
+    color: #6a1b9a; /* Título lila oscuro */
+    margin-bottom: 20px;
+}
+
+.graficos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.graficos img {
+    width: 30%; /* Ajusta el tamaño de los gráficos */
+    border: 2px solid #ba68c8; /* Borde lila */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.graficos img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}

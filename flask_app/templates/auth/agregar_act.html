@@ -1,0 +1,123 @@
+{% extends 'templates/template.html' %}
+
+{% block content %}
+<h2>Agregar actividad</h2>
+{% if error %}
+<p class="error">Error al enviar el formulario</p>
+{% endif %}
+<form action="{{ url_for('agregar') }}" method="post" enctype="multipart/form-data">
+  <h3>¿Dónde será la actividad?</h3>
+  <div class="input-group">
+    <div class="input-container">
+      <label for="region">
+        Región
+        <span class="required">*</span>
+      </label>
+      <select name="region" id="region" required>
+        <option value="">Selecciona Región</option>
+      </select>
+    </div>
+    <div class="input-container">
+      <label for="comuna">
+        Comuna
+        <span class="required">*</span>
+      </label>
+      <select name="comuna" id="comuna" required>
+        <option value="">Selecciona Comuna</option>
+      </select>
+    </div>
+    <div class="input-container">
+      <label for="sector">Sector</label>
+      <input type="text" maxlength="100" name="sector" id="sector">
+    </div>
+  </div>
+  <h3>¿Quién organiza la actividad?</h3>
+  <div class="input-group">
+    <div class="input-container">
+      <label for="nombre">
+        Nombre
+        <span class="required">*</span>
+      </label>
+      <input type="text" maxlength="200" name="nombre" id="nombre" required>
+    </div>
+    <div class="input-container">
+      <label for="email">
+        Email
+        <span class="required">*</span>
+      </label>
+      <input type="email" maxlength="100" name="email" id="email" required>
+    </div>
+    <div class="input-container">
+      <label for="celular">Celular</label>
+      <input type="tel" name="celular" id="celular">
+    </div>
+  </div>
+  <h3>¿Cuándo será y de qué se trata la actividad?</h3>
+  <div class="input-group">
+    <div class="input-container">
+      <label for="dia-hora-inicio">
+        Día hora inicio
+        <span class="required">*</span>
+      </label>
+      <input type="datetime-local" name="dia-hora-inicio" id="dia-hora-inicio" required>
+    </div>
+    <div class="input-container">
+      <label for="dia-hora-termino">Día hora término</label>
+      <input type="datetime-local" name="dia-hora-termino" id="dia-hora-termino">
+    </div>
+    <div class="input-container">
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" name="descripcion" cols="50" rows="10"></textarea>
+    </div>
+    <div class="input-container">
+      <label for="tema">
+        Tema
+        <span class="required">*</span>
+      </label>
+      <select id="tema" name="tema[]" multiple required>
+        <option value="musica">Música</option>
+        <option value="deporte">Deporte</option>
+        <option value="ciencias">Ciencias</option>
+        <option value="religion">Religión</option>
+        <option value="politica">Política</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="juegos">Juegos</option>
+        <option value="baile">Baile</option>
+        <option value="comida">Comida</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+    <div id="glosa-otro-container" class="input-container" style="display: none;">
+      <label for="glosa-otro">
+        Descripción del otro tema de la actividad
+        <span class="required">*</span>
+      </label>
+      <input id="glosa-otro" name="glosa-otro" minlength="3" maxlength="15">
+    </div>
+    <div class="input-container">
+      <label for="foto">
+        Foto
+        <span class="required">*</span>
+      </label>
+      <input type="file" id="foto" name="foto[]" accept="image/png, image/jpeg, image/gif" required>
+      <button id="boton-agregar-foto" type="button">Agregar otra foto</button>
+    </div>
+  </div>
+  <button id="boton-agregar-actividad" type="button">Agregar esta actividad</button>
+  <a href="{{ url_for('inicio') }}" class="boton">Volver al inicio</a>
+  <div id="modal-confirmar" class="contenedor-modal" style="display: none;">
+    <div id="contenido-modal-confirmar" class="contenido-modal">
+      <p>¿Desea agregar esta actividad?</p>
+      <div class="contenedor-botones">
+        <button id="boton-confirmar" type="submit">Confirmar</button>
+        <button id="boton-cancelar" type="button">Volver al formulario</button>
+      </div>
+    </div>
+    <div id="contenido-modal-exito" class="contenido-modal" style="display: none;">
+      <p>Actividad agregada correctamente!</p>
+      <a href="{{ url_for('inicio') }}">Volver a la portada</a>
+    </div>
+  </div>
+</form>
+<script src="{{ url_for('static', filename='js/agregar_act.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles_listado.css">
+
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <div>
+        <h1> Listado de Actividades</h1>
+    </div>
+    <table>
+        <tr>
+            <th>Inicio</th>
+            <th>Termino</th>
+            <th>Comuna</th>
+            <th>Sector</th>
+            <th>Tema</th>
+            <th>Foto</th>
+        </tr>
+        <tr>
+            <td> 2025/05/15 10:15</td>
+            <td>2025/05/15 11:45</td>
+            <td>Santiago</td>
+            <td>Providencia</td>
+            <td>Natacion</td>
+            <td><img src="../img/natacion.jpg" id="nata" alt="Una actividad de natacion" ></td>
+        </tr>
+        <tr>
+            <td> 2025/05/16 10:15</td>
+            <td>2025/05/16 11:45</td>
+            <td>Santiago</td>
+            <td>Pudahuel</td>
+            <td>Escalada</td>
+            <td><img src="../img/escalada.jpg" id="esca" alt="Una actividad de escalada" ></td>
+        </tr>
+        <tr>
+            <td> 2025/05/17 10:15</td>
+            <td>2025/05/17 11:45</td>
+            <td>Santiago</td>
+            <td>Sala Toqui</td>
+            <td>Karaoke</td>
+            <td><img src="../img/karaoke.jpg" id="kara" alt="Una actividad de karaoke"  ></td>
+            
+        </tr>
+            <td> 2025/05/18 10:15</td>
+            <td>2025/05/18 11:45</td>
+            <td>Santiago</td>
+            <td>Ñuñoa</td>
+            <td>Pintar</td>
+            <td><img src="../img/pintar.jpg" id="pintar" alt="Una actividad de pintar"  ></td>
+        <tr>
+            <td> 2025/05/19 10:15</td>
+            <td>2025/05/19 11:45</td>
+            <td>Santiago</td>
+            <td>Las Condes</td>
+            <td>Rollers</td>
+            <td><img src="../img/rollers.jpg" id="rollers" alt="Una actividad de rollers"></td>
+        </tr>
+        
+    </table>
+
+    <!--Contenedor para mostrar el detalle de la actividad -->
+    <div id="detalle-actividad" style="display: none;">
+        <h2>Detalle de la Actividad</h2>
+        <p><strong>Inicio:</strong> <span id="detalle-inicio"></span></p>
+        <p><strong>Término:</strong> <span id="detalle-termino"></span></p>
+        <p><strong>Comuna:</strong> <span id="detalle-comuna"></span></p>
+        <p><strong>Sector:</strong> <span id="detalle-sector"></span></p>
+        <p><strong>Tema:</strong> <span id="detalle-tema"></span></p>
+        <p><strong>Foto:</strong> <img id="detalle-foto" src="" alt="Foto de la actividad" onclick="openImageInNewWindow(this)"></p>
+        <div class="botones-detalle">
+            <button id="volver-listado">Volver al Listado</button>
+            <a href="index.html"><button type="button">Volver a la Portada</button></a>
+        </div>
+    </div>
+</body>
+<script lang="javascript" src="../js/ver_listado_act.js"></script>
+</html>

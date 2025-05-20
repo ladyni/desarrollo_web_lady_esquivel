@@ -1,0 +1,51 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height of the container to fill the entire viewport */
+    flex-direction: column; /* Align buttons in a column */
+}
+
+
+.boton-agrega, .boton-ver, .boton-estadisticas {
+    font-size: 10px; /* Increase button size */
+    margin-bottom: 10px; /* Add margin between buttons */
+    
+}
+.boton-agrega, .boton-ver, .boton-estadisticas{
+    cursor: pointer;
+
+}
+.ultimas-actividades {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.ultimas-actividades h2 {
+    color: #6a1b9a; /* Lila oscuro */
+    margin-bottom: 15px;
+}
+
+.ultimas-actividades table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #f3e5f5; /* Fondo lila claro */
+    border: 1px solid #d1c4e9; /* Borde lila */
+}
+
+.ultimas-actividades th, .ultimas-actividades td {
+    border: 1px solid #d1c4e9;
+    padding: 10px;
+    text-align: center;
+}
+
+.ultimas-actividades th {
+    background-color: #ba68c8; /* Lila más oscuro */
+    color: white;
+}
+
+.ultimas-actividades img {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
